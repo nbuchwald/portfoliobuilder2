@@ -1,0 +1,16 @@
+<ul class="projects">
+  <% for(var i=0; i < projects.length; i++){ %>
+    <li class="project">
+      <span><%= projects[i].name %></span>
+      <span><%= projects[i].description %></span>
+    </li>
+  <% } %>
+  <br>
+  Index EJS
+  
+  <form action="/projects" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="description" name="description">
+  <button type="submit">Save</button>
+  
+</ul>
