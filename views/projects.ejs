@@ -1,13 +1,21 @@
 <br><br><br>
 <center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Create New Project
-  
+
 </button></center>
 <% include projectform %>
 <br>
   <!-- /.row -->
   
-
+<ul class="projects">
+                <% for(var i=0; i < projects.length; i++){ %>
+                  <li class="project">
+                    <span><%= projects[i].name %></span>
+                    <span><%= projects[i].description %></span>
+                  </li>
+                <% } %>
+                <br>
+                
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary">

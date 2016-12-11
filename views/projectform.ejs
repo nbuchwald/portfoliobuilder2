@@ -14,28 +14,64 @@
       </div>
       <div class="modal-body">
         <body>
-              <ul class="projects">
-                <% for(var i=0; i < projects.length; i++){ %>
-                  <li class="project">
-                    <span><%= projects[i].name %></span>
-                    <span><%= projects[i].description %></span>
-                  </li>
-                <% } %>
-                <br>
-                Index EJS
+              
+            
                 
                 <form action="/projects" method="POST">
-                <input type="text" placeholder="name" name="name">
-                <input type="text" placeholder="description" name="description">
-                <button type="submit">Save</button>
                 
                 
-              </ul>
-              </html>
+                
+                <!-- Project Name -->
+                <label for="projectName">Project Name</label>
+                <input type="text"  name="projectName">
+                <br>
+
+                <!-- Project Description -->
+                <label for="projectDescription">Project Description</label>
+                <input type="text" placeholder="Examples: requires JavaScript, research necessary, etc." name="projectDescription" >
+                <br>
+                <!-- In Progress? -->
+                <input type="checkbox" placeholder ="inProgress" name="inProgress" class="form-check-input">
+                  Project currently in progress
+                </label>
+                <br>
+                <!-- Which course is this for? -->
+                <label for="courseSelection" >Which course is this project for?</label>
+                <select class="form-control" placeholder = "courseSelection" name = "courseSelection" id="courseSelection">
+                  <option>Mobile to Cloud</option>
+                  <option>iOS Development</option>
+                  <option>Learning Media Design</option>
+                  <option>Chinese Revolution</option>
+                  <option>Body Politics</option>
+                  <option>Personal</option>
+                </select>
+              
+              <br>
+              <!-- Goals -->
+              
+                <label for="goals" >What are your goals for this project?</label>
+                <textarea class="form-control" placeholder = "Examples: get an A, learn a certain concept, etc. " name = "goals" id="goals" rows="3"></textarea>
+            
+              <br>
+              <!-- Rubric/Instructions -->
+              <!-- <div class="form-group">
+                <label for="InputFile">Upload the Rubric and/or Instructions for this Project</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+              </div> -->
+              
+              
+
+                
+  
+                
+        
+             
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save Project</button>
+        </form>
       </div>
     </div>
   </div>

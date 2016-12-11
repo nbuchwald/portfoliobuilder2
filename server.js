@@ -16,6 +16,7 @@ app.set('view engine', 'ejs')
 //mongoDB connection
 const MongoClient = require('mongodb').MongoClient
 //var projects = [];
+var db;
 MongoClient.connect('mongodb://nbuchwald:bubbi727@ds159517.mlab.com:59517/porfoliobuilder'
 	, function (err, database) {
 		if (err) return console.log(err)
@@ -31,7 +32,7 @@ app.get('/', (req, res) => {
   db.collection('projects').find().toArray((err, result) => {
     if (err) return console.log(err)
     // renders index.ejs
-    console.log('rendering "index.ejs"');
+    
     res.render('index.ejs', {projects: result})
   })
 })
