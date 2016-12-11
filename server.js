@@ -2,8 +2,9 @@
 const express = require('express');
 const bodyParser= require('body-parser'); //needed to parse post requests
 var morgan = require('morgan');
-app.use(express.static(__dirname + '/'))
 const app = express();
+
+
 
 app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({extended: true})); //use bodyparser for forms
@@ -30,26 +31,13 @@ app.get('/', (req, res) => {
   db.collection('projects').find().toArray((err, result) => {
     if (err) return console.log(err)
     // renders index.ejs
+    console.log('rendering "index.ejs"');
     res.render('index.ejs', {projects: result})
   })
 })
 
-//GET Request
-// app.get('/', function (req, res) {
-//   res.render(views, locals);
-//   res.sendFile(__dirname + '/views/index.ejs')
-//   //__dirname = /Users/natalyabuchwald/Desktop/portfoliobuilder2
-//   var cursor = db.collection('projects').find();
-//   //projects: db collection retrieval
-//   db.collection('projects').find().toArray(function(err, results) {
-//   	if (err) return console.log(err)
-//     // renders index.ejs
-//     res.render('index.ejs', {projects: results});
-  
-// 	})
-// });
-
-
+//Get static files
+app.use(express.static(__dirname + '/'))
 
 
 //POST Request
