@@ -23,7 +23,7 @@ $(document).ready(function(){
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ,
+          
         })
       }).then(function (response) {
         window.location.reload()

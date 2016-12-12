@@ -4,7 +4,9 @@ const bodyParser= require('body-parser'); //needed to parse post requests
 var morgan = require('morgan');
 const app = express();
 
-
+//Intialize LocalStorage
+var LocalStorage = require('node-localstorage').LocalStorage,
+localStorage = new LocalStorage('./scratch');
 
 app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({extended: true})); //use bodyparser for forms
