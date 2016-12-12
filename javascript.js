@@ -1,5 +1,12 @@
 //javascript.js
 
 $(document).ready(function(){
-//     $('#myModal').modal('toggle')
+	$('form').submit(function (event) {
+	  // event.preventDefault();
+	  var newProjectAdded = $('<div class="alert alert-success" role="alert">' +
+   'You successfully added a new project!' +'</div>');
+	  $('.rowOfProjects').beofre(newProjectAdded);
+	  
+	});
 })
+
