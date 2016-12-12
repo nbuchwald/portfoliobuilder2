@@ -24,9 +24,11 @@ MongoClient.connect('mongodb://nbuchwald:bubbi727@ds159517.mlab.com:59517/porfol
 		if (err) return console.log(err)
   		db = database
   	//localhost server
-  		app.listen(5000, function() {
-    		console.log('Listening on 5000...with db connection')
-  		})
+    var port = process.env.PORT || 3000;
+    app.listen(port,function() {
+        console.log('Listening on ' + port +'...with db connection')
+      });
+  		
   
 });
 //GET Request Ver 2
