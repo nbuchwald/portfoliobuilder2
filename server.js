@@ -24,8 +24,8 @@ MongoClient.connect('mongodb://nbuchwald:bubbi727@ds159517.mlab.com:59517/porfol
 		if (err) return console.log(err)
   		db = database
   	//localhost server
-  		app.listen(3000, function() {
-    		console.log('Listening on 3000...with db connection')
+  		app.listen(5000, function() {
+    		console.log('Listening on 5000...with db connection')
   		})
   
 });
