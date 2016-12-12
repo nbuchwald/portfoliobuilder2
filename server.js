@@ -37,6 +37,16 @@ app.get('/', (req, res) => {
   })
 })
 
+//GET Request Ver 2
+app.get('/specificProject', (req, res) => {
+  db.collection('projects').find().toArray((err, result) => {
+    if (err) return console.log(err)
+    // renders index.ejs
+    
+    res.render('specificProject.ejs', {projects: result})
+  })
+})
+
 //Get static files
 app.use(express.static(__dirname + '/'))
 
