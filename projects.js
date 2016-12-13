@@ -5,7 +5,13 @@ $(document).ready(function(){
 	//Testing to see if this works...
 	var countData = {count:0};
 	loadDataFromLocalStorage();
-  	
+  	$('#specificProject').hide();
+    $('#projectButton').click(function(){
+      console.log("!!!!PRESSED THE BUTTON!!!!")
+      $('#projects').toggle();
+      $('#specificProject').toggle();
+
+    });
   	$('#count').text(countData.count);
 
 

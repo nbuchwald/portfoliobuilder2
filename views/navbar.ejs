@@ -11,15 +11,8 @@
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="739838565454-1t88mc942ch17dsepk0ulh7vk90m18cv.apps.googleusercontent.com">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <script>
-          function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-              console.log('User signed out.');
-            });
-          }
-        </script>
+       
+        
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li id="dashboard"><a href="/">Dashboard</a></li>

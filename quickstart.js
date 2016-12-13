@@ -30,6 +30,7 @@ fs.readFile('client_secret.json', function processClientSecrets(err, content) {
  */
 function authorize(credentials, callback) {
   var clientSecret = credentials.installed.client_secret;
+
   var clientId = credentials.installed.client_id;
   var redirectUrl = credentials.installed.redirect_uris[0];
   var auth = new googleAuth();
