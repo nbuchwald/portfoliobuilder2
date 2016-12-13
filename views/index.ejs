@@ -6,58 +6,24 @@
   
 
     <% include navbar %>
- <br><br><br>
-<center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Create New Project
+    <br><br><br>
+    <center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Create New Project
 
-</button></center>
-<% include projectform %>
-<br>
-  <!-- /.row -->
-  <div id="count">
-
-  </div>
-  <div id ="add">
-  <button type="button" class="btn btn-secondary">Add</button>
-  </div>  
-    <div id ="refresh">
-  <button type="button" class="btn btn-secondary">refresh</button>
-  </div>     
-  <div id ="status">
- 
-  </div>  
-    <!-- <% include googlepicker %>
-       -->
+    </button></center>
+    <% include projectform %>
+    <br>
+   
       <div id="projects">
         <% include projects %>
       </div>
-      <div id="specificProject">
-        <% include specificProject %>
-      </div>
 
-    <hr>
+
+      <hr>
         <% include footer %>
-    </div>
-<!--     <!DOCTYPE html>
+      </div>
+  
 
-    <div id="demo">
-    <h1>The XMLHttpRequest Object</h1>
-    <button type="button" onclick="loadDoc()">Change Content</button>
-    </div>
-
-    <script>
-    function loadDoc() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("demo").innerHTML =
-          this.responseText;
-        }
-      };
-      xhttp.open("GET", "ajax_info.txt", true);
-      xhttp.send();
-    }
-    </script> -->
 
 
 
