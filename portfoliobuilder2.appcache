@@ -2,8 +2,7 @@ CACHE MANIFEST
 # version 0.94
 
 # Local files to cache
-projects.html
-projects.js
+localStorage.js
 
 # Cache CDN versions of jQuery and jQuery mobile (js and css)
 http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css

@@ -1,22 +1,18 @@
-//projects.js
-
+//localStorage.js
+//Modeled after count LocalStorage example from Prof. Mertz
 $(document).ready(function(){
 	var projectData;
 	//Testing to see if this works...
 	var countData = {count:0};
 	loadDataFromLocalStorage();
-  	$('#specificProject').hide();
-    $('#projectButton').click(function(){
-      console.log("!!!!PRESSED THE BUTTON!!!!")
-      $('#projects').toggle();
-      $('#specificProject').toggle();
 
-    });
+
   	$('#count').text(countData.count);
 
 
   // On tap of increment button
   $('#add').click(function() {
+    console.log("added!");
     // Increment the count
     countData.count++;
     // Update the display

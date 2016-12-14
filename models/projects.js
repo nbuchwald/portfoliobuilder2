@@ -9,7 +9,8 @@ var projectSchema = new Schema({
   description: String,
   course: String,
   startDate: String,
-  dueDate: String
+  dueDate: String,
+  goals: String
 });
 
 // the schema is useless so far

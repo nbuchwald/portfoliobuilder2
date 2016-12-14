@@ -3,19 +3,16 @@
                 
                 
                 <!-- Project Name -->
-                <label for="name">Project Name</label>
+                <label for="name">Project Name:</label>
                 <input type="text"  name="name">
                 <br>
 
                 <!-- Project Description -->
-                <label for="description">Project Description</label>
-                <input type="text" placeholder="Examples: requires JavaScript, research necessary, etc." name="description" >
+                <label for="description">Brief Project Description:</label>
+                <textarea class="form-control" placeholder = "Examples: requires JavaScript, research, etc." name = "description" id="description" rows="3"></textarea>
                 <br>
-                <!-- In Progress? -->
-             <!--    <input type="checkbox" placeholder ="inProgress" name="inProgress" class="form-check-input">
-                  Project currently in progress
-                </label>
-                <br> -->
+              
+            
                 <!-- Which course is this for? -->
                 <label for="courses" >Which course is this project for?</label>
                 <select class="form-control" placeholder = "courseSelection" name = "course" id="course">
@@ -29,17 +26,17 @@
               
               <br>
                <!-- startDate -->
-                <label for="startDate">Start Date</label>
-                <input type="text" placeholder="Today" name="startDate" >
+                <label for="startDate">Start Date:</label>
+                <input type="text" placeholder="mm/dd/yy" name="startDate" >
                 <br>
                  <!-- dueDate -->
-                <label for="endDate">End Date</label>
-                <input type="text" placeholder="..." name="dueDate" >
+                <label for="dueDate">Due Date:</label>
+                <input type="text" placeholder="mm/dd/yy" name="dueDate" >
                 <br>
               <!-- Goals -->
               
-                <!-- <label for="goals" >What are your goals for this project?</label>
-                <textarea class="form-control" placeholder = "Examples: get an A, learn a certain concept, etc. " name = "goals" id="goals" rows="3"></textarea> -->
+                <label for="goals" >What are your goals for this project?</label>
+                <textarea class="form-control" placeholder = "Examples: get an A, learn a certain concept, etc. " name = "goals" id="goals" rows="3"></textarea>
             
               <br>
            
@@ -47,10 +44,10 @@
         
       </div>
       
-        <button type="submit" class="btn btn-primary">Save Project</button>
+        <center><button type="submit" class="btn btn-primary">Save Project</button></center>
         </form>
                 
-  
+  <br>
                 
         
              
