@@ -13,7 +13,7 @@
       var clientId = "739838565454-1t88mc942ch17dsepk0ulh7vk90m18cv.apps.googleusercontent.com"
 
       // Scope to use to access user's photos.
-      var scope = ['https://www.googleapis.com/auth/photos'];
+      var scope = ['https://www.googleapis.com/auth/photos','https://www.googleapis.com/auth/drive.readonly', 'https://www.googleapis.com/auth/drive'];
 
       var pickerApiLoaded = false;
       var oauthToken;
@@ -46,7 +46,7 @@
         }
       }
 
-      // Create and render a Picker object for picking user Photos.
+      // Create and render a Picker object for picking user docs
       function createPicker() {
         if (pickerApiLoaded && oauthToken) {
           var picker = new google.picker.PickerBuilder().
@@ -69,13 +69,13 @@
           var doc = data[google.picker.Response.DOCUMENTS][0];
           url = doc[google.picker.Document.URL];
         }
-        var message = 'You picked: ' + url;
-        document.getElementById('result').innerHTML = message;
+        var message = url;
+        document.getElementById('pickerResult').innerHTML = message;
       }
     </script>
   </head>
   <body>
-    <div id="result"></div>
+ 
 
     <!-- The Google API Loader script. -->
     <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>

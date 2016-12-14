@@ -63,6 +63,10 @@ $(document).ready(function(){
     location.reload();
   });
 
+$("#pickerButton").click( function(){
+  console.log("HI I ADDED SOMETHING HERE")
+});
+
 $('#GoogleSignIn').show( function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -79,3 +83,5 @@ $('#GoogleSignIn').show( function onSignIn(googleUser) {
       });
 
 });
+
+
