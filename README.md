@@ -16,4 +16,4 @@ https://startbootstrap.com/template-overviews/sb-admin-2/
 
 #installation
 
-please clone repository  and run npm install commands before running
+please clone repository and run npm install commands before running
